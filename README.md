@@ -1,17 +1,26 @@
+Run Application with different application-xxx.propeties files
 
-To activate specific application-xxx.properties
-_________________________________________________
-Run As > Run Configurations > Arguements > -Dspring.profiles.active=dev or -Dspring.profiles.active=qa
+Run As > Run Configurations > Arguments > -Dspring.profiles.active=dev or -Dspring.profiles.active=qa
+
+
+
+Run Test Cases with different application-xxx.propeties files
+
+
+       
+
+Maven Install to build jar with different application-xxx.propeties
+
+Run As > Maven Build..
 
 
 --------------------------------
-GET http://localhost:8080/userlogin
-
-Body - Raw Json
+POST http://localhost:8080/userlogin
 
 {
 	"userName" : "admin",
 	"password" : "password"
 }
+
 
 
