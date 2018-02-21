@@ -33,7 +33,7 @@ public class UserLoginControllerIntegrationTest {
 	public void test_Valid_UserLogin() throws Exception {
 		this.mockMvc.perform(post("/userlogin")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content("{\"userName\" : \"qaUser\",\"password\" : \"qaloginpwd\"}"))
+				.content("{\"userName\" : \"" + userName +"\",\"password\" : \"" + pwd +"\"}"))
 				.andExpect(status().isOk())
 		.andExpect(jsonPath("$.returnMessage").value("Login Successfull"));
 		
@@ -41,18 +41,20 @@ public class UserLoginControllerIntegrationTest {
 	
 	@Test
 	public void test_InValid_UserLogin() throws Exception {
+		String invalidUserName = "invalidUser";
 		this.mockMvc.perform(post("/userlogin")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content("{\"userName\" : \"invalidUsername\",\"password\" : \"invalidpwd\"}"))
+				.content("{\"userName\" : \"" + invalidUserName +"\",\"password\" : \"" + pwd +"\"}"))
 				.andExpect(status().isOk())
 		.andExpect(jsonPath("$.returnMessage").value("Invalid Username"));
 	}
 	
 	@Test
 	public void test_Invalid_Password() throws Exception {
+		String invalidPasword = "invalidPwd";
 		this.mockMvc.perform(post("/userlogin")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content("{\"userName\" : \"qaUser\",\"password\" : \"passwor\"}"))
+				.content("{\"userName\" : \"" + userName +"\",\"password\" : \"" + invalidPasword +"\"}"))
 				.andExpect(status().isOk())
 		.andExpect(jsonPath("$.returnMessage").value("Invalid password"));
 	}
