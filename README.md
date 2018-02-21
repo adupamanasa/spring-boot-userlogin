@@ -26,5 +26,7 @@ POST http://localhost:8080/userlogin
 	"password" : "password"
 }
 
-
+![capture6](https://user-images.githubusercontent.com/16677013/36505732-658c2db8-1722-11e8-8fd4-be5e3a639860.PNG)
+![capture7](https://user-images.githubusercontent.com/16677013/36505733-65a2f2dc-1722-11e8-9520-694254899ecd.PNG)
+![capture8](https://user-images.githubusercontent.com/16677013/36505734-65b8a2a8-1722-11e8-9cd5-58f8450e80dc.PNG)
 
