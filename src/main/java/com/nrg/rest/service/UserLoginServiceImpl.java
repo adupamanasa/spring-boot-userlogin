@@ -7,7 +7,7 @@ import com.nrg.rest.model.MessageResponse;
 import com.nrg.rest.model.User;
 
 @Service
-public class SpringRestServiceImpl implements UserLoginService {
+public class UserLoginServiceImpl implements UserLoginService {
 
 	@Value("${user.userName}")
 	public String userName;

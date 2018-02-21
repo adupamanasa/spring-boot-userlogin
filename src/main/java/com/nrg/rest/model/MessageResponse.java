@@ -4,17 +4,9 @@ public class MessageResponse {
 	
 	public String returnMessage;
 
-	public String getSuccessMessage() {
-		return returnMessage;
-	}
-
-	public void setSuccessMessage(String successMessage) {
-		this.returnMessage = successMessage;
-	}
-
-	public MessageResponse(String successMessage) {
+	public MessageResponse(String returnMessage) {
 		super();
-		this.returnMessage = successMessage;
+		this.returnMessage = returnMessage;
 	}
 
 }

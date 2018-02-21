@@ -1,7 +1,5 @@
 package com.nrg.rest.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +18,7 @@ public class UserLoginController {
 	private UserLoginService userLoginService;
 
 	@RequestMapping(value = "/userlogin", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public MessageResponse userLogin(@RequestBody User user, HttpServletRequest request) {
+	public MessageResponse userLogin(@RequestBody User user) {
 		return userLoginService.validateUser(user);
 	}
 
